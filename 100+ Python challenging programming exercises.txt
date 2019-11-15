@@ -2371,5 +2371,35 @@ solutions=solve(numheads,numlegs)
 print solutions
 
 #----------------------------------------#
+Question :
+
+Print and Count all the substrings of a given string.
+Sample Input : hello
+Sample Output : ['h', 'he', 'hel', 'hell', 'hello', 'e', 'el', 'ell', 'ello', 'l', 'll', 'llo', 'l', 'lo', 'o']
+15
+
+Hint : 
+You may use two loops and get all substrings of string and store them in an empty list.
+
+Solution:
+
+def finding_substrings(string):
+	list = []
+	count = 0
+	for i in range(len(string)):
+		for j in range(i+1,len(string)+1):
+			list.append(string[i:j])
+			count = count + 1
+	print(list)
+	print(count)
+
+string = input("enter string")
+finding_substrings(string)
+
+#----------------------------------------#
+
+
+
+
 
 
